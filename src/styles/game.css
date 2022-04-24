@@ -1,15 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
-
-:root {
-    --secondary: #17202D;
-}
-
-* {
-    font-family: 'Noto Sans', sans-serif;
-}
+@import url("../App.css");
 
 .main-game {
-    background-color: var(--secondary);
+    background-color: var(--main);
     display: flex;
     border-radius: 25px;
     width: 72%;
@@ -43,7 +35,6 @@
 }
 
 h3 {
-    color: rgba(255, 255, 255, 1);
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -51,7 +42,7 @@ h3 {
 }
 
 .column-left span {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--light-white);
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -59,7 +50,6 @@ h3 {
 }
 
 .column-right span {
-    color: rgba(255, 255, 255, 1);
     font-style: normal;
     font-weight: 700;
     font-size: 48px;

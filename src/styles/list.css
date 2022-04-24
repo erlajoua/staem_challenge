@@ -1,12 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
-
-* {
-    font-family: 'Noto Sans', sans-serif;
-}
-
+@import url("../App.css");
 
 .main-list {
-    background-color: #1B2837;
+    background-color: var(--background);
+}
+
+.list-header {
+    margin-left: 20px;
+}
+
+.list-header-title {
+    margin-bottom: 20px;
+}
+
+.list-header input {
+    width: 12%;
+    padding-left: 12px;
+}
+
+.list-header input::placeholder {
+    color: var(--light-white);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 95.6%;
 }
 
 .list-header-title span {
@@ -43,14 +59,9 @@
 
 .list-header-sortby select {
     flex: 1;
-    background-color: #1A3A53;
-    color: white;
-    border-radius: 15px;
-    border: none;
     margin-right: 20px;
-    height: 40px;
     padding: 4px 4px 4px 12px;
-    outline: none;
+    color: white;
 }
 
 .list-header-sortby select option {
@@ -63,4 +74,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.list-content span {
+    font-size: 36px;
+}
+
+.input {
+    height: 40px;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    border: none;
+    outline: none;
 }

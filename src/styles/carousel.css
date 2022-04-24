@@ -1,5 +1,7 @@
+@import url("../App.css");
+
 .main-carousel {
-    background-color: aqua;
+    background-color: var(--background);
     width: 100%;
     height: 50%;
     display: flex;

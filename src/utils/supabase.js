@@ -9,19 +9,17 @@ export const supabase = createClient(supabase_url,
     }
 })
 
-export const getGames = async (setArray, limit, filter) => {
-    let query = supabase.from("steam").select("*").range(limit, limit + 4);
-    if (filter !== null) {
-        query = query.order(filter, { ascending: true });
-    }
+export const getGames = async (setArray, {limit, filter, name}) => {
+    let query = supabase.from("steam").select("*");
 
-    console.log("Query = ", query);
+    if (name != null) query = query.ilike('title', `%${name}%`);
+    if (filter !== null) query = query.order(filter, { ascending: true });
+    query = query.range(limit, limit + 4);
 
     const { data, error } = await query;
-    console.log(data);
 
     if (error)
-        console.error('Error fetching steam', error);
+        console.error('Error fetching steam');
     else if (data && limit > 0)
         setArray(prev => [...prev, ...data]);
     else if (data)

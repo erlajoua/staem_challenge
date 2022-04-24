@@ -1,4 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+
+:root {
+  --main: #17202D;
+  --secondary: #1A3A53;
+  --background: #1B2837;
+  --light-white: hsla(0, 0%, 100%, 0.502);
+  --white: #FFFFFF;
+}
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+  color: var(--white);
+}
+
 .App {
-  background-color: red;
+  background-color: var(--background);
   height: 100vh;
 }
+

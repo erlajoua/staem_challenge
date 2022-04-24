@@ -1,34 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react'
+
 import '../styles/list.css'
+
 import { Game } from './game';
 import { getGames } from '../utils/supabase';
-
-const options = [
-    {
-        label: "All",
-        value: "",
-    },
-    {
-        label: "Price",
-        value: "price",
-    }
-];
+import { defaultOptions, OPTIONS_FILTERS} from '../utils/const'
 
 export const List = ({ games: data }) => {
     const [games, setGames] = useState(data);
-    const limit = useRef(0);
     const loader = useRef(null);
-    const filter = useRef(null);
+    const options = useRef(defaultOptions)
 
     const addScroll = () => {
-        limit.current += 5;
-        getGames(setGames, limit.current, filter.current);
+        options.current.limit += 5;
+        getGames(setGames, options.current);
     }
 
-    const selectFilter = (value) => {
-        limit.current = 0;
-        filter.current = value;
-        getGames(setGames, limit.current, filter.current);
+    const findBySetting = (setting, value) => {
+        if (value === "") value = null;
+        options.current.limit = 0;
+        options.current[setting] = value;
+        getGames(setGames, options.current);
     }
 
     useEffect(() => {
@@ -44,12 +36,12 @@ export const List = ({ games: data }) => {
                     <span>{"New & Trending"}</span>
                 </div>
                 <div className="list-header-buttons">
-                    <button>Search</button>
+                    <input type="text" placeholder="Search" className="input" onChange={e => findBySetting("name", e.target.value) } />
                     <div className="list-header-sortby">
                         <span>Sort by :</span>
-                        <select onChange={e => { selectFilter(e.target.value !== '' ? e.target.value : null) }}>
-                            {options.map((option, index) => (
-                                <option value={option.value} key={index}>{option.label}</option>
+                        <select className="input" onChange={e => { findBySetting("filter", e.target.value) }}>
+                            {OPTIONS_FILTERS.map((option, index) => (
+                                <option value={option.value} key={index} className="input">{option.label}</option>
                             ))}
                         </select>
                     </div>
@@ -57,9 +49,12 @@ export const List = ({ games: data }) => {
             </div>
             <div className='list-content'>
                 {
-                    games.map((game, index) => (
-                        <Game key={index} game={game} />
-                    ))
+                    games.length > 0 ?
+                        games.map((game, index) => (
+                            <Game key={index} game={game} />
+                        ))
+                        :
+                        <span>No result found.</span>
                 }
             </div>
             <div ref={loader} />
