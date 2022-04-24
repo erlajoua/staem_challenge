@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+
+:root {
+    --secondary: #17202D;
+}
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.main-game {
+    background-color: var(--secondary);
+    display: flex;
+    border-radius: 25px;
+    width: 72%;
+    margin-bottom: 2%;
+}
+
+.game-informations {
+    display: flex;
+    flex: 1;
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    margin-left: 5%;
+    padding-top: 1%;
+}
+
+.column-right {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    justify-content: space-around;
+    margin-right: 5%;
+}
+
+.game-image {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 95.6%;
+}
+
+.column-left span {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 95.6%;
+}
+
+.column-right span {
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    align-self: flex-end;
+}

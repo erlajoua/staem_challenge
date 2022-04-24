@@ -1,0 +1,8 @@
+.main-header {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10%;
+    padding: 0 3% 0 3%;
+}
