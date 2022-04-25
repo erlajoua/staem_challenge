@@ -1,3 +1,5 @@
+export const SUPABASE_URL = "https://gqkuommdmfzmwkzdewma.supabase.co";
+
 export const OPTIONS_FILTERS = [
     {
         label: "All",
@@ -9,7 +11,7 @@ export const OPTIONS_FILTERS = [
     }
 ];
 
-export const defaultOptions = {
+export const DEFAULT_OPTIONS = {
     limit: 0,
     filter: null,
     name: null

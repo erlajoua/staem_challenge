@@ -1,8 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
+import { SUPABASE_URL } from './const';
 
-const supabase_url = "https://gqkuommdmfzmwkzdewma.supabase.co";
-
-export const supabase = createClient(supabase_url,
+export const supabase = createClient(SUPABASE_URL,
     process.env.REACT_APP_ANON_KEY, {
     headers: {
         Authorization: `Bearer ${process.env.REACT_APP_AUTH_KEY}`

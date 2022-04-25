@@ -1,9 +1,40 @@
 @import url("../App.css");
 
-.main-carousel {
-    background-color: var(--background);
-    width: 100%;
-    height: 50%;
+/* .main-carousel */
+
+.is-active img {
+    width: 75%;
+}
+
+.is-next img, .is-prev img, .is- {
+    transform: scale(80%);
+}
+
+.is-next img {
+    margin-right: auto;
+}
+
+.is-prev img {
+    margin-left: auto;
+}
+
+
+.splide__slide {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+}
+
+img {
+    border-radius: 15px;
+}
+
+.splide__pagination {
+    bottom: auto !important;
+    margin-top: 15%;
+}
+
+.splide__pagination__page {
+    width: 12px !important;
+    height: 12px !important;
+    margin: 16px 8px 0px 8px !important;
 }

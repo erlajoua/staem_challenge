@@ -7,13 +7,13 @@ import { Header } from './components/header'
 import { List } from './components/list'
 
 import { getGames } from './utils/supabase';
-import { defaultOptions } from './utils/const';
+import { DEFAULT_OPTIONS } from './utils/const';
 
 function App() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    getGames(setGames, defaultOptions);
+    getGames(setGames, DEFAULT_OPTIONS);
   }, [])
 
   return (

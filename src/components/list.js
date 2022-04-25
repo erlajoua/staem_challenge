@@ -4,12 +4,12 @@ import '../styles/list.css'
 
 import { Game } from './game';
 import { getGames } from '../utils/supabase';
-import { defaultOptions, OPTIONS_FILTERS} from '../utils/const'
+import { DEFAULT_OPTIONS, OPTIONS_FILTERS} from '../utils/const'
 
 export const List = ({ games: data }) => {
     const [games, setGames] = useState(data);
     const loader = useRef(null);
-    const options = useRef(defaultOptions)
+    const options = useRef(DEFAULT_OPTIONS)
 
     const addScroll = () => {
         options.current.limit += 5;

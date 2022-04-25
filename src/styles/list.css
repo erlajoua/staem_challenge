@@ -1,11 +1,15 @@
 @import url("../App.css");
 
 .main-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--background);
+    margin-top: 8%;
 }
 
 .list-header {
-    margin-left: 20px;
+    width: 72%;
 }
 
 .list-header-title {
@@ -60,7 +64,7 @@
 .list-header-sortby select {
     flex: 1;
     margin-right: 20px;
-    padding: 4px 4px 4px 12px;
+    padding: 1px 4px 1px 12px;
     color: white;
 }
 
@@ -74,6 +78,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 72%;
 }
 
 .list-content span {
@@ -81,7 +86,7 @@
 }
 
 .input {
-    height: 40px;
+    height: 36px;
     background-color: var(--secondary);
     border-radius: 15px;
     border: none;
