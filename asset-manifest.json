@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/staem_challenge/static/css/main.f3f422c2.css",
-    "main.js": "/staem_challenge/static/js/main.fc141dff.js",
+    "main.css": "/staem_challenge/static/css/main.82ae157a.css",
+    "main.js": "/staem_challenge/static/js/main.e86f055b.js",
     "static/js/787.b2990cbc.chunk.js": "/staem_challenge/static/js/787.b2990cbc.chunk.js",
     "index.html": "/staem_challenge/index.html",
-    "main.f3f422c2.css.map": "/staem_challenge/static/css/main.f3f422c2.css.map",
-    "main.fc141dff.js.map": "/staem_challenge/static/js/main.fc141dff.js.map",
+    "main.82ae157a.css.map": "/staem_challenge/static/css/main.82ae157a.css.map",
+    "main.e86f055b.js.map": "/staem_challenge/static/js/main.e86f055b.js.map",
     "787.b2990cbc.chunk.js.map": "/staem_challenge/static/js/787.b2990cbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3f422c2.css",
-    "static/js/main.fc141dff.js"
+    "static/css/main.82ae157a.css",
+    "static/js/main.e86f055b.js"
   ]
 }
