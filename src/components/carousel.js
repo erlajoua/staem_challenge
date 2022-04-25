@@ -13,10 +13,10 @@ export const Carousel = ({ games }) => {
                 perPage: 1,
                 focus: 'center',
                 arrows: false,
-                keyboard: 'global',
                 updateOnMove: true,
                 padding: '20%',
-                drag: false
+                drag: false,
+                isNavigation: true
             }}
                 className="carousel"
             >

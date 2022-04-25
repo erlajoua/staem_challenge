@@ -6,6 +6,7 @@
   --background: #1B2837;
   --light-white: hsla(0, 0%, 100%, 0.502);
   --white: #FFFFFF;
+  user-select: none;
 }
 
 * {
